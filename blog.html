@@ -51,7 +51,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-                <a class="navbar-brand" href="index.html">Aman Sohi</a>
+                <a class="navbar-brand" href="#">Aman Sohi</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -64,7 +64,7 @@
                             <a class="nav-link" href="skills.html">Hobbies & Skills</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="blog.html">Blog</a>
+                            <a class="nav-link" href="blog.html">Blog</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact</a>
@@ -81,64 +81,93 @@
     </header>
 
     <main class="container mt-5">
-        <h1>Blog: Animals of India</h1>
-        <p>Explore the incredible wildlife of India, home to some of the most diverse and fascinating animals on Earth!</p>
+        <!-- Hero Section -->
+        <section id="hero" class="text-center mt-5">
+            <h1>Hey everyone! 👋</h1>
+            <p class="lead">
+                I’m <strong>Aman Sohi</strong>, and welcome to my personal static site!  
+                This site is generated using the <strong>Hugo Static Site Generator</strong> and styled with the beautiful <strong>Hugo-Profile</strong> theme.
+            </p>
+            <p>
+                Explore my journey, hobbies, skills, and projects. I hope you enjoy navigating through my site!
+            </p>
+        </section>
 
-        <div class="blog-card">
-            <img src="/tiger.jpg" alt="Bengal Tiger">
-            <h2>Bengal Tiger</h2>
-            <p>The Bengal Tiger is India's national animal and an iconic symbol of strength and grace. Found primarily in national parks like Sundarbans and Ranthambore, these majestic creatures are a key part of India's rich biodiversity.</p>
-            <a href="https://www.nationalgeographic.com/animals/mammals/facts/bengal-tiger" class="read-more">Read more about Bengal Tigers</a>
-        </div>
+        <!-- About Section -->
+        <section id="about" class="mt-5">
+            <h2>About Me</h2>
+            <p>
+                I am a passionate individual from Punjab, India, currently pursuing my higher education in Canada.  
+                My journey has been filled with learning, exploring, and engaging with technology, nature, and people.
+            </p>
+        </section>
 
-        <div class="blog-card">
-            <img src="elephant.jpg" alt="Asian Elephant">
-            <h2>Asian Elephant</h2>
-            <p>Known for their intelligence and strong familial bonds, Asian elephants can be seen in the forests of Kerala, Karnataka, and Tamil Nadu. They play a vital role in India's cultural and ecological heritage.</p>
-            <a href="https://www.worldwildlife.org/species/asian-elephant" class="read-more">Read more about Asian Elephants</a>
-        </div>
+        <!-- Projects Section -->
+        <section id="projects" class="mt-5">
+            <h2>Projects</h2>
+            <p>
+                Check out my latest projects that showcase my skills in web development, technology, and creative endeavors.  
+                Visit the <a href="blog.html">Blog</a> for more updates and detailed insights.
+            </p>
+        </section>
 
-        <div class="blog-card">
-            <img src="peacock.jpg" alt="Indian Peacock">
-            <h2>Indian Peacock</h2>
-            <p>The Indian Peacock, India's national bird, is famous for its dazzling plumage and vibrant courtship displays. These birds can often be found in rural areas and near forests.</p>
-            <a href="https://kids.nationalgeographic.com/animals/birds/facts/indian-peafowl" class="read-more">Read more about Indian Peacocks</a>
-        </div>
+        <!-- Services Section -->
+        <section id="services" class="mt-5">
+            <h2>Services</h2>
+            <p>
+                I offer a variety of services, including web design, content creation, and technical support.  
+                Reach out via the <a href="contact.html">Contact</a> page for collaboration opportunities.
+            </p>
+        </section>
 
-        <div class="blog-card">
-            <img src="leapord.jpeg" alt="Snow Leopard">
-            <h2>Snow Leopard</h2>
-            <p>Found in the icy Himalayas, the elusive Snow Leopard is a symbol of the fragile mountain ecosystem. These rare and beautiful predators are known as 'Ghosts of the Mountains'.</p>
-            <a href="https://en.wikipedia.org/wiki/Snow_leopard" class="read-more">Read more about Snow Leopards</a>
-        </div>
-
-        <div class="blog-card">
-            <img src="cobra.jpg" alt="Indian Cobra">
-            <h2>Indian Cobra</h2>
-            <p>A revered and sometimes feared creature in Indian culture, the Indian Cobra is often associated with myths and folklore. These snakes play a crucial role in maintaining ecological balance.</p>
-            <a href="https://en.wikipedia.org/wiki/Indian_cobra" class="read-more">Read more about Indian Cobras</a>
-        </div>
+        <!-- Contact Section -->
+        <section id="contact" class="mt-5">
+            <h2>Contact Me</h2>
+            <p>
+                Feel free to get in touch through my <a href="contact.html">Contact</a> page.  
+                I'd love to hear your feedback, suggestions, or inquiries!
+            </p>
+        </section>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        // Theme Toggle Script with Local Storage
         const themeToggleBtn = document.getElementById('theme-toggle');
         const themeIcon = document.getElementById('theme-icon');
         const body = document.body;
 
+        // Check for saved theme in localStorage
+        const savedTheme = localStorage.getItem('theme') || 'light';
+
+        // Apply the saved theme on page load
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-theme');
+            themeIcon.textContent = '☀️';
+            body.style.backgroundColor = '#343a40';
+            body.style.color = '#ffffff';
+        } else {
+            body.classList.remove('dark-theme');
+            themeIcon.textContent = '🌙';
+            body.style.backgroundColor = '#f8f9fa';
+            body.style.color = '#343a40';
+        }
+
+        // Add click event listener to toggle theme
         themeToggleBtn.addEventListener('click', () => {
             body.classList.toggle('dark-theme');
             if (body.classList.contains('dark-theme')) {
                 themeIcon.textContent = '☀️';
                 body.style.backgroundColor = '#343a40';
                 body.style.color = '#ffffff';
+                localStorage.setItem('theme', 'dark');
             } else {
                 themeIcon.textContent = '🌙';
                 body.style.backgroundColor = '#f8f9fa';
                 body.style.color = '#343a40';
+                localStorage.setItem('theme', 'light');
             }
         });
     </script>
 </body>
 
-</html>
