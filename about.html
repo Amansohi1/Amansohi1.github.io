@@ -5,53 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
-    <meta property="og:url" content="http://localhost:60039/">
-    <meta property="og:site_name" content="Aman Sohi's Site">
-    <meta property="og:title" content="Aman Sohi's Site">
-    <meta property="og:locale" content="en_us">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Aman Sohi's Site">
-    <meta name="description" content="A personal portfolio site.">
-    <title>About - Aman Sohi</title>
-    
-    <!-- Favicon and Preconnect Links -->
-    <link rel="icon" href="/fav.png" type="image/gif">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
-
-    <!-- External Stylesheets -->
-    <link rel="stylesheet" href="/css/font.css">
+    <title>About Me - Aman Sohi</title>
     <link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/theme.css">
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/projects.css">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-
-    <!-- Internal styles for theme toggle effect -->
     <style>
         body {
-            font-size: 1rem;
-            font-weight: 400;
-            line-height: 1.5;
-            text-align: left;
             background-color: var(--background-color);
-            transition: background-color 0.3s ease, color 0.3s ease;
+            color: var(--text-color);
         }
 
-        .navbar {
-            transition: background-color 0.3s ease;
+        h1, h2 {
+            color: var(--primary-color);
         }
 
-        /* Additional styles to ensure that theme toggles work properly */
-        .navbar-toggler-icon {
-            background-color: #007bff;
+        .section {
+            margin-top: 2rem;
+        }
+
+        .highlight {
+            color: var(--primary-color);
+            font-weight: bold;
         }
     </style>
 </head>
@@ -61,15 +34,23 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <a class="navbar-brand" href="index.html">Aman Sohi</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="skills.html">Hobbies & Skills</a></li>
-                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="skills.html">Hobbies & Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
                         <li class="nav-item">
                             <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Theme">
                                 <span id="theme-icon">🌙</span>
@@ -82,37 +63,51 @@
     </header>
 
     <main class="container mt-5">
-        <h1>About Me</h1>
-        <p>Hi! I'm Aman Sohi, a passionate individual currently pursuing higher studies in Canada. I come from Punjab, India, and I would love to share some details about my background, hobbies, and interests.</p>
+        <section class="section">
+            <h1>About Me</h1>
+            <p>Hi! I'm <span class="highlight">Aman Sohi</span>, a passionate individual currently pursuing higher studies in Canada. I come from Punjab, India, and I would love to share some details about my background, hobbies, and interests.</p>
+        </section>
 
-        <h2>My Journey</h2>
-        <p>Originally from Punjab, I completed my schooling there before moving to Canada for higher studies. I'm always exploring new ideas and love engaging with technology, nature, and people.</p>
+        <section class="section">
+            <h2>My Journey</h2>
+            <p>Originally from Punjab, I completed my schooling there before moving to Canada for higher studies. I'm always exploring new ideas and love engaging with technology, nature, and people.</p>
+        </section>
 
-        <h3>Hobbies & Interests</h3>
-        <ul>
-            <li>Playing and watching cricket</li>
-            <li>Reading books - My favorite book is <i>"Birha tu Sultan"</i> by the famous Punjabi poet, Shiv Kumar Batalvi.</li>
-            <li>Spending time with nature and animals</li>
-            <li>Travelling to new places to experience different cultures</li>
-            <li>Deep interest in philosophy and learning about the world around me</li>
-        </ul>
+        <section class="section">
+            <h2>Hobbies & Interests</h2>
+            <ul>
+                <li>Playing and watching cricket</li>
+                <li>Reading books - My favorite book is <em>"Birha tu Sultan"</em> by the famous Punjabi poet, Shiv Kumar Batalvi.</li>
+                <li>Spending time with nature and animals</li>
+                <li>Traveling to new places to experience different cultures</li>
+                <li>Deep interest in philosophy and learning about the world around me</li>
+            </ul>
+        </section>
 
-        <h3>About My Love for Nature</h3>
-        <p>Nature has always fascinated me. The landscapes of Punjab, with their vast fields and the beauty of the rural environment, are deeply close to my heart. The natural beauty of Canada has also captivated me, and I enjoy spending time outdoors, appreciating the picturesque surroundings.</p>
+        <section class="section">
+            <h2>About My Love for Nature</h2>
+            <p>Nature has always fascinated me. The landscapes of Punjab, with their vast fields and the beauty of the rural environment, are deeply close to my heart. The natural beauty of Canada has also captivated me, and I enjoy spending time outdoors, appreciating the picturesque surroundings.</p>
+        </section>
 
-        <h3>My Pet Dog: Sheero</h3>
-        <p>I had a wonderful pet dog, Sheero, a Labrador. He was incredibly intelligent, loyal, and a great companion. I miss spending time with him, but the memories remain close to my heart.</p>
+        <section class="section">
+            <h2>My Pet Dog: Sheero</h2>
+            <p>I had a wonderful pet dog, Sheero, a Labrador. He was incredibly intelligent, loyal, and a great companion. I miss spending time with him, but the memories remain close to my heart.</p>
+        </section>
 
-        <h3>Key Skills & Attributes</h3>
-        <ul>
-            <li>Strong communication and interpersonal skills</li>
-            <li>Experience in leadership and teamwork in various settings</li>
-            <li>Deep understanding of technology and its impact on everyday life</li>
-            <li>A strong commitment to continuous learning and self-improvement</li>
-        </ul>
+        <section class="section">
+            <h2>Key Skills & Attributes</h2>
+            <ul>
+                <li>Strong communication and interpersonal skills</li>
+                <li>Experience in leadership and teamwork in various settings</li>
+                <li>Deep understanding of technology and its impact on everyday life</li>
+                <li>A strong commitment to continuous learning and self-improvement</li>
+            </ul>
+        </section>
 
-        <h3>Personal Philosophy</h3>
-        <p>I believe in continuous growth and improvement. My personal philosophy is rooted in learning, helping others, and contributing to a better world. I am passionate about making the most out of every opportunity.</p>
+        <section class="section">
+            <h2>Personal Philosophy</h2>
+            <p>I believe in continuous growth and improvement. My personal philosophy is rooted in learning, helping others, and contributing to a better world. I am passionate about making the most out of every opportunity.</p>
+        </section>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
