@@ -33,38 +33,36 @@
     <script defer src="/fontawesome-6/all-6.4.2.js"></script>
     <style>
         :root {
-        --text-color: #343a40;
-        --text-secondary-color: #6c757d;
-        --text-link-color: #007bff;
-        --background-color: #eaedf0;
-        --secondary-background-color: #64ffda1a;
-        --primary-color: #007bff;
-        --secondary-color: #f8f9fa;
-    }
+            --text-color: #343a40;
+            --text-secondary-color: #6c757d;
+            --text-link-color: #007bff;
+            --background-color: #eaedf0;
+            --secondary-background-color: #64ffda1a;
+            --primary-color: #007bff;
+            --secondary-color: #f8f9fa;
+        }
 
-    body {
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 1.5;
-        text-align: left;
-        background-color: var(--background-color);
-        display: flex;
-        justify-content: center; /* Centers content horizontally */
-        align-items: center; /* Centers content vertically */
-        flex-direction: column; /* Ensures the content flows vertically */
-        min-height: 100vh; /* Ensures body takes full height of the viewport */
-    }
+        body {
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            text-align: left;
+            background-color: var(--background-color);
+        }
 
-    body::-webkit-scrollbar {
-        width: 8px;
-        background-color: var(--background-color);
-    }
+        body::-webkit-scrollbar {
+            width: 8px;
+            background-color: var(--background-color);
+        }
 
-    ::-webkit-scrollbar-thumb {
-        background: #b0b0b0;
-        border-radius: 1rem;
-    }
+        ::-webkit-scrollbar-thumb {
+            background: #b0b0b0;
+            border-radius: 1rem;
+        }
     </style>
+
+    
+    
 </head>
 
 <body>
@@ -101,70 +99,33 @@
     </header>
 
     <main class="container mt-5">
-        <section id="hero" class="text-center mt-5">
-            <h1>Hey everyone! 👋</h1>
-            <p class="lead">
-                I’m <strong>Aman Sohi</strong>, and welcome to my personal static site!  
-                This site is generated using the <strong>Hugo Static Site Generator</strong> and styled with the beautiful <strong>Hugo-Profile</strong> theme.
-            </p>
-            <p>
-                Explore my journey, hobbies, skills, and projects. I hope you enjoy navigating through my site!
-            </p>
+        <section id="about">
+            <h1>Hey! Sat Shri Akal Ji :-) </h1>
+            <p>Welcome to my personal portfolio. Here you can learn about some Asian Animals and you can contact me.
+            This site is generated using the Hugo Static Site Generator and styled with the beautiful Hugo-Profile theme. </p>
         </section>
-
-        <section id="about" class="mt-5">
-            <h2>About Me</h2>
-            <p>
-                I am a passionate individual from Punjab, India, currently pursuing my higher education in Canada.  
-                My journey has been filled with learning, exploring, and engaging with technology, nature, and people.
-            </p>
-        </section>
-
         <section id="contact" class="mt-5">
             <h2>Contact Me</h2>
-            <p>
-                Feel free to get in touch through my <a href="contact.html">Contact</a> page.  
-                I'd love to hear your feedback, suggestions, or inquiries!
-            </p>
+            <p>Feel free to reach out via the contact form or social links.</p>
         </section>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Theme Toggle Script with Local Storage
         const themeToggleBtn = document.getElementById('theme-toggle');
         const themeIcon = document.getElementById('theme-icon');
         const body = document.body;
 
-        // Check for saved theme in localStorage
-        const savedTheme = localStorage.getItem('theme') || 'light';
-
-        // Apply the saved theme on page load
-        if (savedTheme === 'dark') {
-            body.classList.add('dark-theme');
-            themeIcon.textContent = '☀️';
-            body.style.backgroundColor = '#343a40';
-            body.style.color = '#ffffff';
-        } else {
-            body.classList.remove('dark-theme');
-            themeIcon.textContent = '🌙';
-            body.style.backgroundColor = '#f8f9fa';
-            body.style.color = '#343a40';
-        }
-
-        // Add click event listener to toggle theme
         themeToggleBtn.addEventListener('click', () => {
             body.classList.toggle('dark-theme');
             if (body.classList.contains('dark-theme')) {
-                themeIcon.textContent = '☀️';
+                themeIcon.textContent = '☀';
                 body.style.backgroundColor = '#343a40';
                 body.style.color = '#ffffff';
-                localStorage.setItem('theme', 'dark');
             } else {
                 themeIcon.textContent = '🌙';
                 body.style.backgroundColor = '#f8f9fa';
                 body.style.color = '#343a40';
-                localStorage.setItem('theme', 'light');
             }
         });
     </script>
