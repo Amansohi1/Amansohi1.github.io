@@ -4,16 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+    <meta property="og:url" content="http://localhost:60039/">
+    <meta property="og:site_name" content="Aman Sohi's Portfolio">
+    <meta property="og:title" content="Aman Sohi's Portfolio">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Aman Sohi's Portfolio">
+    <meta name="description" content="A personal portfolio site showcasing my projects and services.">
     <title>Contact - Aman Sohi</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="icon" href="/fav.png" type="image/gif">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/theme.css">
+    <script defer src="/fontawesome-6/all-6.4.2.js"></script>
+    <style>
+        :root {
+            --text-color: #343a40;
+            --text-secondary-color: #6c757d;
+            --text-link-color: #007bff;
+            --background-color: #f8f9fa;
+            --primary-color: #007bff;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .navbar {
+            background-color: var(--primary-color);
+        }
+
+        .navbar-brand, .nav-link {
+            color: white;
+        }
+
+        .navbar-brand:hover, .nav-link:hover {
+            color: #f8f9fa;
+        }
+
+        .theme-toggle-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .container {
+            margin-top: 2rem;
+        }
+
+        .contact-info a {
+            color: var(--primary-color);
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
                 <a class="navbar-brand" href="index.html">Aman Sohi</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -22,21 +85,48 @@
                         <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
                         <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                         <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                        <li class="nav-item">
+                            <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Theme">
+                                <span id="theme-icon">🌙</span>
+                            </button>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
     <main class="container mt-5">
         <h1>Contact Me</h1>
         <p>You can reach me through the following channels:</p>
-        <ul>
-            <li>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></li>
-            <li>Phone: +1 234 567 890</li>
-            <li>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">Your LinkedIn</a></li>
-        </ul>
+        <div class="contact-info">
+            <ul>
+                <li>Email: <a href="mailto:your-email@example.com">amansohi@gmail.com</a></li>
+                <li>Phone: +1 82552-24269</li>
+                <li>LinkedIn: <a href="https://linkedin.com/in/amansohi1" target="_blank">Amandeeep Sohi</a></li>
+            </ul>
+        </div>
     </main>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const body = document.body;
+
+        themeToggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            if (body.classList.contains('dark-theme')) {
+                themeIcon.textContent = '☀️';
+                body.style.backgroundColor = '#343a40';
+                body.style.color = '#ffffff';
+            } else {
+                themeIcon.textContent = '🌙';
+                body.style.backgroundColor = '#f8f9fa';
+                body.style.color = '#343a40';
+            }
+        });
+    </script>
 </body>
 
 </html>
