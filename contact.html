@@ -4,8 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact - Aman Sohi</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/theme.css">
+    <style>
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        h1 {
+            color: var(--primary-color);
+        }
+
+        .contact-section {
+            margin-top: 2rem;
+            padding: 2rem;
+            background-color: var(--card-background);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-control {
+            margin-bottom: 1rem;
+        }
+
+        .submit-btn {
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--primary-color-dark);
+        }
+
+        .social-links a {
+            margin-right: 1rem;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color-dark);
+        }
+    </style>
 </head>
 
 <body>
@@ -13,56 +59,87 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <a class="navbar-brand" href="index.html">Aman Sohi</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="skills.html">Skills and Hobbies</a></li>
-                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="skills.html">Hobbies & Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Theme">
+                                <span id="theme-icon">🌙</span>
+                            </button>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
     <main class="container mt-5">
-        <h1>Contact</h1>
-        <p>If you would like to get in touch with me, feel free to reach out via the contact details below:</p>
+        <section class="contact-section">
+            <h1>Contact Me</h1>
+            <p>If you'd like to get in touch, feel free to use the contact form below or connect with me on social media!</p>
 
-        <h3>Contact Information</h3>
-        <ul>
-            <li><strong>Email:</strong> <a href="mailto:ab3839542@gmail.com">ab3839542@gmail.com</a></li>
-            <li><strong>Phone:</strong> <a href="tel:+61450490273">+61 450 490 273</a></li>
-            <li><strong>Address:</strong> 30/91 Arthur Street, Rose Hill, NSW 2142, Australia</li>
-        </ul>
+            <form action="mailto:your_email@example.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Your email address" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" class="form-control" rows="5" placeholder="Your message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
 
-        <h3>Social Media</h3>
-        <ul>
-            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/aman-sohi" target="_blank">linkedin.com/in/aman-sohi</a></li>
-            <li><strong>GitHub:</strong> <a href="https://github.com/amansohi" target="_blank">github.com/amansohi</a></li>
-        </ul>
-
-        <h3>Contact Form</h3>
-        <form>
-            <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+        <section class="mt-5">
+            <h2>Social Media</h2>
+            <p>Connect with me on these platforms:</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
             </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter your email">
-            </div>
-            <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="4" placeholder="Write your message"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
+        </section>
     </main>
 
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const body = document.body;
+
+        themeToggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            if (body.classList.contains('dark-theme')) {
+                themeIcon.textContent = '☀️';
+                body.style.backgroundColor = '#343a40';
+                body.style.color = '#ffffff';
+            } else {
+                themeIcon.textContent = '🌙';
+                body.style.backgroundColor = '#f8f9fa';
+                body.style.color = '#343a40';
+            }
+        });
+    </script>
 </body>
 
 </html>
