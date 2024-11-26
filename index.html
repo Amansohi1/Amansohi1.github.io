@@ -33,32 +33,37 @@
     <script defer src="/fontawesome-6/all-6.4.2.js"></script>
     <style>
         :root {
-            --text-color: #343a40;
-            --text-secondary-color: #6c757d;
-            --text-link-color: #007bff;
-            --background-color: #eaedf0;
-            --secondary-background-color: #64ffda1a;
-            --primary-color: #007bff;
-            --secondary-color: #f8f9fa;
-        }
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --text-link-color: #007bff;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+    }
 
-        body {
-            font-size: 1rem;
-            font-weight: 400;
-            line-height: 1.5;
-            text-align: left;
-            background-color: var(--background-color);
-        }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+        background-color: var(--background-color);
+        display: flex;
+        justify-content: center; /* Centers content horizontally */
+        align-items: center; /* Centers content vertically */
+        flex-direction: column; /* Ensures the content flows vertically */
+        min-height: 100vh; /* Ensures body takes full height of the viewport */
+    }
 
-        body::-webkit-scrollbar {
-            width: 8px;
-            background-color: var(--background-color);
-        }
+    body::-webkit-scrollbar {
+        width: 8px;
+        background-color: var(--background-color);
+    }
 
-        ::-webkit-scrollbar-thumb {
-            background: #b0b0b0;
-            border-radius: 1rem;
-        }
+    ::-webkit-scrollbar-thumb {
+        background: #b0b0b0;
+        border-radius: 1rem;
+    }
     </style>
 </head>
 
