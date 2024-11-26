@@ -27,46 +27,6 @@
             font-weight: bold;
         }
     </style>
-    <script>
-    // Get references to elements
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    const themeIcon = document.getElementById('theme-icon');
-    const body = document.body;
-
-    // Check for saved theme in localStorage
-    const savedTheme = localStorage.getItem('theme') || 'light';
-
-    // Apply the saved theme on page load
-    if (savedTheme === 'dark') {
-        body.classList.add('dark-theme');
-        themeIcon.textContent = '☀️';
-        body.style.backgroundColor = '#343a40';
-        body.style.color = '#ffffff';
-    } else {
-        body.classList.remove('dark-theme');
-        themeIcon.textContent = '🌙';
-        body.style.backgroundColor = '#f8f9fa';
-        body.style.color = '#343a40';
-    }
-
-    // Toggle theme and save preference in localStorage
-    themeToggleBtn.addEventListener('click', () => {
-        if (body.classList.contains('dark-theme')) {
-            body.classList.remove('dark-theme');
-            themeIcon.textContent = '🌙';
-            body.style.backgroundColor = '#f8f9fa';
-            body.style.color = '#343a40';
-            localStorage.setItem('theme', 'light'); // Save as light
-        } else {
-            body.classList.add('dark-theme');
-            themeIcon.textContent = '☀️';
-            body.style.backgroundColor = '#343a40';
-            body.style.color = '#ffffff';
-            localStorage.setItem('theme', 'dark'); // Save as dark
-        }
-    });
-</script>
-
 </head>
 
 <body>
