@@ -150,47 +150,25 @@
         </section>
     </main>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script>
-        // Get references to elements
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
         const themeToggleBtn = document.getElementById('theme-toggle');
         const themeIcon = document.getElementById('theme-icon');
         const body = document.body;
 
-        // Check for saved theme in localStorage
-        const savedTheme = localStorage.getItem('theme') || 'light';
-
-        // Apply the saved theme on page load
-        if (savedTheme === 'dark') {
-            body.classList.add('dark-theme');
-            themeIcon.textContent = '☀️';
-            body.style.backgroundColor = '#343a40';
-            body.style.color = '#ffffff';
-        } else {
-            body.classList.remove('dark-theme');
-            themeIcon.textContent = '🌙';
-            body.style.backgroundColor = '#f8f9fa';
-            body.style.color = '#343a40';
-        }
-
-        // Add click event listener to toggle theme
         themeToggleBtn.addEventListener('click', () => {
-            // Toggle the dark-theme class on the body
             body.classList.toggle('dark-theme');
-        
-            // Update styles and save the theme preference
             if (body.classList.contains('dark-theme')) {
                 themeIcon.textContent = '☀️';
                 body.style.backgroundColor = '#343a40';
                 body.style.color = '#ffffff';
-                localStorage.setItem('theme', 'dark'); // Save as dark
             } else {
                 themeIcon.textContent = '🌙';
                 body.style.backgroundColor = '#f8f9fa';
                 body.style.color = '#343a40';
-                localStorage.setItem('theme', 'light'); // Save as light
             }
         });
+        
     </script>
 
     
