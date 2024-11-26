@@ -4,114 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
-    <meta property="og:url" content="http://localhost:60039/">
-    <meta property="og:site_name" content="Aman Sohi's Site">
-    <meta property="og:title" content="Aman Sohi's Site">
-    <meta property="og:locale" content="en_us">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Aman Sohi's Site">
-    <meta name="description" content="A personal portfolio site.">
-    <title>About - Aman Sohi</title>
-    
-    <!-- Favicon and Preconnect Links -->
-    <link rel="icon" href="/fav.png" type="image/gif">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
-
-    <!-- External Stylesheets -->
-    <link rel="stylesheet" href="/css/font.css">
-    <link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/theme.css">
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/projects.css">
-
-    <!-- Bootstrap CSS -->
+    <title>Contact - Aman Sohi</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-
-    <!-- Internal styles for theme toggle effect -->
-    <style>
-        body {
-            font-size: 1rem;
-            font-weight: 400;
-            line-height: 1.5;
-            text-align: left;
-            background-color: var(--background-color);
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        .navbar {
-            transition: background-color 0.3s ease;
-        }
-
-        /* Additional styles to ensure that theme toggles work properly */
-        .navbar-toggler-icon {
-            background-color: #007bff;
-        }
-    </style>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <a class="navbar-brand" href="index.html">Aman Sohi</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="skills.html">Hobbies & Skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="skills.html">Skills and Hobbies</a></li>
                         <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                         <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
-                        <li class="nav-item">
-                            <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Theme">
-                                <span id="theme-icon">🌙</span>
-                            </button>
-                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-
     <main class="container mt-5">
-        <h1>Contact Me</h1>
-        <p>You can reach me through the following channels:</p>
-        <div class="contact-info">
-            <ul>
-                <li>Email: <a href="mailto:your-email@example.com">amansohi@gmail.com</a></li>
-                <li>Phone: +1 82552-24269</li>
-                <li>LinkedIn: <a href="https://linkedin.com/in/amansohi1" target="_blank">Amandeeep Sohi</a></li>
-            </ul>
-        </div>
+        <h1>Contact</h1>
+        <p>If you would like to get in touch with me, feel free to reach out via the contact details below:</p>
+
+        <h3>Contact Information</h3>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:ab3839542@gmail.com">ab3839542@gmail.com</a></li>
+            <li><strong>Phone:</strong> <a href="tel:+61450490273">+61 450 490 273</a></li>
+            <li><strong>Address:</strong> 30/91 Arthur Street, Rose Hill, NSW 2142, Australia</li>
+        </ul>
+
+        <h3>Social Media</h3>
+        <ul>
+            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/aman-sohi" target="_blank">linkedin.com/in/aman-sohi</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/amansohi" target="_blank">github.com/amansohi</a></li>
+        </ul>
+
+        <h3>Contact Form</h3>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Write your message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const themeIcon = document.getElementById('theme-icon');
-        const body = document.body;
-
-        themeToggleBtn.addEventListener('click', () => {
-            body.classList.toggle('dark-theme');
-            if (body.classList.contains('dark-theme')) {
-                themeIcon.textContent = '☀️';
-                body.style.backgroundColor = '#343a40';
-                body.style.color = '#ffffff';
-            } else {
-                themeIcon.textContent = '🌙';
-                body.style.backgroundColor = '#f8f9fa';
-                body.style.color = '#343a40';
-            }
-        });
-    </script>
 </body>
 
 </html>
